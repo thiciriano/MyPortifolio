@@ -25,6 +25,13 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
+    /* Ajuste dinâmico dos ícones Lucide */
+    i[data-lucide] {
+      color: #000000; /* Preto por padrão (modo claro) */
+    }
+    body.dark i[data-lucide] {
+      color: #ffffff; /* Branco no modo escuro */
+    }
   </style>
 </head>
 <body class="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
@@ -108,18 +115,31 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="text-center">
-      <h1 class="title text-5xl font-bold mb-6">Skills</h1>
-      <h2 class="subtitle text-3xl opacity-60 mb-12">[Technologies & Tools]</h2>
-      <div class="flex flex-wrap justify-center gap-10 text-lg">
-        <span class="flex items-center gap-4"><div class="skill-letter">H</div> HTML5</span>
-        <span class="flex items-center gap-4"><div class="skill-letter">C</div> CSS3</span>
-        <span class="flex items-center gap-4"><div class="skill-letter">J</div> JavaScript</span>
-        <span class="flex items-center gap-4"><div class="skill-letter">G</div> Git & GitHub</span>
-        <span class="flex items-center gap-4"><div class="skill-letter">T</div> Tailwind CSS</span>
-        <span class="flex items-center gap-4"><div class="skill-letter">A</div> Accessibility</span>
-      </div>
-    </section>
+   <section id="skills" class="text-center">
+  <h1 class="title text-5xl font-bold mb-6">Skills</h1>
+  <h2 class="subtitle text-3xl opacity-60 mb-12">[Technologies & Tools]</h2>
+  <div class="flex flex-wrap justify-center gap-10 text-lg">
+    <span class="flex items-center gap-4">
+      <i data-lucide="file-code"></i> HTML5
+    </span>
+    <span class="flex items-center gap-4">
+      <i data-lucide="paintbrush"></i> CSS3
+    </span>
+    <span class="flex items-center gap-4">
+      <i data-lucide="code"></i> JavaScript
+    </span>
+    <span class="flex items-center gap-4">
+      <i data-lucide="git-branch"></i> Git & GitHub
+    </span>
+    <span class="flex items-center gap-4">
+      <i data-lucide="layers"></i> Tailwind CSS
+    </span>
+    <span class="flex items-center gap-4">
+      <i data-lucide="accessibility"></i> Accessibility
+    </span>
+  </div>
+</section>
+
 
     <!-- Contact -->
     <section id="contact" class="text-center">
@@ -159,7 +179,7 @@
         $body.toggleClass('dark');
         const isDark = $body.hasClass('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        lucide.createIcons(); // garante que os ícones do sol/lua apareçam corretamente
+        lucide.createIcons(); // Re-renderiza ícones para refletir a mudança de cor
       });
     });
   </script>
