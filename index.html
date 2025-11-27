@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiago Neves - Frontend Developer</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <style>
+    body { font-family: 'Exo', system-ui, sans-serif; }
+    .title { font-family: 'Courier New', monospace; }
+    .subtitle { font-family: 'Exo 2', sans-serif; font-weight: 100; }
+    i { color: currentColor !important; }
+  </style>
+</head>
+<body class="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-300 dark:border-gray-700">
+    <nav class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+      <img src="assets/logo.svg" alt="Thiago Neves Logo" class="w-12 h-12" />
+      <ul class="flex gap-8 text-lg font-medium">
+        <li><a href="#about" class="hover:opacity-60 transition">About</a></li>
+        <li><a href="#projects" class="hover:opacity-60 transition">Projects</a></li>
+        <li><a href="#skills" class="hover:opacity-60 transition">Skills</a></li>
+        <li><a href="#contact" class="hover:opacity-60 transition">Contact</a></li>
+      </ul>
+      <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition">
+        <i data-lucide="sun" class="w-6 h-6 hidden dark:block"></i>
+        <i data-lucide="moon" class="w-6 h-6 block dark:hidden"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-16 space-y-28">
+
+    <!-- About -->
+    <section id="about" class="text-center">
+      <h1 class="title text-5xl md:text-6xl font-bold mb-6">Thiago Neves</h1>
+      <img src="assets/profile.jpg" alt="Thiago Neves" class="w-48 h-48 rounded-full mx-auto my-8 object-cover border-4 border-gray-300 dark:border-gray-700 shadow-2xl grayscale" />
+      <h2 class="subtitle text-3xl text-gray-600 dark:text-gray-400 mb-6">[Frontend Developer]</h2>
+      <p class="text-lg max-w-2xl mx-auto leading-relaxed opacity-80">
+        Passionate frontend developer focused on building clean, accessible, and modern web experiences with minimalist design.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h1 class="title text-5xl font-bold text-center mb-6">Projects</h1>
+      <h2 class="subtitle text-3xl text-center opacity-60 mb-16">[Selected Work]</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Discord Clone -->
+        <a href="https://github.com/thiciriano/discord-clone" target="_blank" class="group block">
+          <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
+            <img src="assets/discordpng.png" alt="Discord Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">Discord Landing Page Clone</h3>
+              <p class="opacity-70 text-sm">Responsive layout with HTML and CSS Flexbox</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- YouTube Clone -->
+        <a href="https://github.com/thiciriano/youtube-clone" target="_blank" class="group block">
+          <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
+            <img src="assets/youtubepng.png" alt="YouTube Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">YouTube Homepage Clone</h3>
+              <p class="opacity-70 text-sm">Pixel-perfect interface using semantic HTML</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- To-Do List -->
+        <a href="https://github.com/thiciriano/to-do-list" target="_blank" class="group block">
+          <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
+            <img src="assets/todo-preview.jpg" alt="To-Do List" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">Interactive To-Do List</h3>
+              <p class="opacity-70 text-sm">Modern task manager with HTML, Tailwind CSS and jQuery</p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="text-center">
+      <h1 class="title text-5xl font-bold mb-6">Skills</h1>
+      <h2 class="subtitle text-3xl opacity-60 mb-12">[Technologies & Tools]</h2>
+      <div class="flex flex-wrap justify-center gap-8 text-lg">
+        <span class="flex items-center gap-3"><i data-lucide="html5" class="w-6 h-6"></i> HTML5</span>
+        <span class="flex items-center gap-3"><i data-lucide="css3" class="w-6 h-6"></i> CSS3</span>
+        <span class="flex items-center gap-3"><i data-lucide="javascript" class="w-6 h-6"></i> JavaScript</span>
+        <span class="flex items-center gap-3"><i data-lucide="github" class="w-6 h-6"></i> Git & GitHub</span>
+        <span class="flex items-center gap-3"><i data-lucide="palette" class="w-6 h-6"></i> Tailwind CSS</span>
+        <span class="flex items-center gap-3"><i data-lucide="accessibility" class="w-6 h-6"></i> Accessibility</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="text-center">
+      <h1 class="title text-5xl font-bold mb-6">Contact</h1>
+      <h2 class="subtitle text-3xl opacity-60 mb-12">[Get In Touch]</h2>
+      <div class="flex justify-center gap-12 text-4xl">
+        <a href="https://github.com/thiciriano" target="_blank" aria-label="GitHub" class="hover:opacity-60 transition">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/thiago-neves-40aa62284/" target="_blank" aria-label="LinkedIn" class="hover:opacity-60 transition">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="mailto:thinevescoding@gmail.com" aria-label="Email" class="hover:opacity-60 transition">
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 text-sm opacity-60 border-t border-gray-300 dark:border-gray-700">
+    © 2025 Thiago Neves
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Dark Mode (respeita preferência do sistema)
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      $('body').addClass('dark');
+    }
+
+    $('#themeToggle').on('click', () => {
+      $('body').toggleClass('dark');
+      localStorage.setItem('theme', $('body').hasClass('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
