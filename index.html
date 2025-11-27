@@ -54,7 +54,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <!-- Discord Clone -->
-        <a href="https://github.com/thiciriano/discord-clone" target="_blank" class="group block">
+        <a href="https://github.com/thiciriano/meu-portifolio.git" target="_blank" class="group block">
           <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
             <img src="assets/discordpng.png" alt="Discord Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
             <div class="p-6">
@@ -65,7 +65,7 @@
         </a>
 
         <!-- YouTube Clone -->
-        <a href="https://github.com/thiciriano/youtube-clone" target="_blank" class="group block">
+        <a href="https://github.com/thiciriano/meu-portifolio.git" target="_blank" class="group block">
           <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
             <img src="assets/youtubepng.png" alt="YouTube Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
             <div class="p-6">
@@ -78,7 +78,7 @@
         <!-- To-Do List -->
         <a href="https://github.com/thiciriano/to-do-list" target="_blank" class="group block">
           <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
-            <img src="assets/todolist.png" alt="To-Do List" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
+            <img src="assets/todo-preview.jpg" alt="To-Do List" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-2">Interactive To-Do List</h3>
               <p class="opacity-70 text-sm">Modern task manager with HTML, Tailwind CSS and jQuery</p>
@@ -97,7 +97,7 @@
         <span class="flex items-center gap-3"><i data-lucide="html5" class="w-6 h-6"></i> HTML5</span>
         <span class="flex items-center gap-3"><i data-lucide="css3" class="w-6 h-6"></i> CSS3</span>
         <span class="flex items-center gap-3"><i data-lucide="javascript" class="w-6 h-6"></i> JavaScript</span>
-        <span class="flex items-center gap-3"><i data-lucide="github" class="w-6 h-6"></i> Git & GitHub</span>
+        <span class="flex items-center gap-3"><i data-lucide="git-branch" class="w-6 h-6"></i> Git & GitHub</span>
         <span class="flex items-center gap-3"><i data-lucide="palette" class="w-6 h-6"></i> Tailwind CSS</span>
         <span class="flex items-center gap-3"><i data-lucide="accessibility" class="w-6 h-6"></i> Accessibility</span>
       </div>
@@ -125,20 +125,32 @@
     © 2025 Thiago Neves
   </footer>
 
+  <!-- Scripts -->
   <script>
+    // Inicializa ícones Lucide
     lucide.createIcons();
 
-    // Dark Mode (respeita preferência do sistema)
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Dark Mode Toggle (corrigido com jQuery)
+    $(document).ready(function() {
+      const $body = $('body');
+      const $toggle = $('#themeToggle');
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      $('body').addClass('dark');
-    }
+      // Aplica tema salvo ou preferência do sistema
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        $body.addClass('dark');
+      }
 
-    $('#themeToggle').on('click', () => {
-      $('body').toggleClass('dark');
-      localStorage.setItem('theme', $('body').hasClass('dark') ? 'dark' : 'light');
+      // Toggle do botão
+      $toggle.on('click', function() {
+        $body.toggleClass('dark');
+        const isDark = $body.hasClass('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        
+        // Atualiza ícones do Lucide (para garantir visibilidade)
+        lucide.createIcons();
+      });
     });
   </script>
 </body>
