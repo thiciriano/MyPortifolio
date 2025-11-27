@@ -15,11 +15,11 @@ Live demo → [thiciriano.github.io](https://thiciriano.github.io/MyPortfolio) *
 
 ## Projects Showcased
 
-| Project                  | Description                                      | Tech                  | Link |
-|--------------------------|--------------------------------------------------|-----------------------|------|
-| Discord Landing Page     | Responsive clone of Discord's homepage           | HTML, CSS Flexbox     | [View →](https://github.com/thiciriano/discord-clone) |
-| YouTube Homepage         | Pixel-perfect YouTube interface recreation      | HTML, CSS Flexbox     | [View →](https://github.com/thiciriano/youtube-clone) |
-| Interactive To-Do List   | Modern, accessible task manager                  | HTML, Tailwind, jQuery| [View →](https://github.com/thiciriano/to-do-list) |
+| Project                  | Description                                      | Tech                  |
+|--------------------------|--------------------------------------------------|-----------------------
+| Discord Landing Page     | Responsive clone of Discord's homepage           | HTML, CSS Flexbox     | 
+| YouTube Homepage         | Pixel-perfect YouTube interface recreation      | HTML, CSS Flexbox     |
+| Interactive To-Do List   | Modern, accessible task manager                  | HTML, Tailwind, jQuery|
 
 ## Tech Stack
 
