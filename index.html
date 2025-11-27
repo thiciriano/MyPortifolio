@@ -11,27 +11,8 @@
     body { font-family: 'Exo', system-ui, sans-serif; }
     .title { font-family: 'Courier New', monospace; }
     .subtitle { font-family: 'Exo 2', sans-serif; font-weight: 100; }
-    .skill-letter {
-      font-family: 'Courier New', monospace;
-      font-weight: bold;
-      font-size: 1.5rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: currentColor;
-      color: white;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    /* Ajuste dinâmico dos ícones Lucide */
-    i[data-lucide] {
-      color: #000000; /* Preto por padrão (modo claro) */
-    }
-    body.dark i[data-lucide] {
-      color: #ffffff; /* Branco no modo escuro */
-    }
+    i[data-lucide] { color: #000000; }
+    body.dark i[data-lucide] { color: #ffffff; }
   </style>
 </head>
 <body class="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
@@ -39,7 +20,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-300 dark:border-gray-700">
     <nav class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
-      <img src="assets/logo.svg" alt="Thiago Neves Logo" class="w-120 h-12" />
+      <img src="assets/logo.svg" alt="Thiago Neves Logo" class="w-12 h-12" />
       <ul class="flex gap-8 text-lg font-medium">
         <li><a href="#about" class="hover:opacity-60 transition">About</a></li>
         <li><a href="#projects" class="hover:opacity-60 transition">Projects</a></li>
@@ -57,95 +38,81 @@
 
     <!-- About -->
     <section id="about" class="text-center">
-      <h1 class="title text-5xl md:text-6xl font-bold mb-6">Thiago Neves</h1>
+      <h1 class="title text-5xl md:text-6xl font-bold mb-6">{ [THIAGO NEVES] }</h1>
       <img src="assets/profile.jpg" alt="Thiago Neves" class="w-48 h-48 rounded-full mx-auto my-8 object-cover border-4 border-gray-300 dark:border-gray-700 shadow-2xl grayscale" />
-      <h2 class="subtitle text-3xl text-gray-600 dark:text-gray-400 mb-6">[Frontend Developer]</h2>
+      <h2 class="subtitle text-3xl text-gray-600 dark:text-gray-400 mb-6">{ [Frontend Developer] }</h2>
       <p class="text-lg max-w-2xl mx-auto leading-relaxed opacity-80">
         Passionate frontend developer focused on building clean, accessible, and modern web experiences with minimalist design.
       </p>
     </section>
 
     <!-- Projects -->
-<section id="projects">
-  <h1 class="title text-5xl font-bold text-center mb-6">Projects</h1>
-  <h2 class="subtitle text-3xl text-center opacity-60 mb-16">[Selected Work]</h2>
+    <section id="projects">
+      <h1 class="title text-5xl font-bold text-center mb-6">{ [PROJECTS] }</h1>
+      <h2 class="subtitle text-3xl text-center opacity-60 mb-16">{ [Selected Work] }</h2>
 
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-    <!-- Discord Clone -->
-    <a href="https://github.com/thiciriano/DESAFIODIOBOOTCAMP2" target="_blank" class="group block">
-      <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
-        <img src="assets/discordpng.png" alt="Discord Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
-        <div class="p-6">
-          <h3 class="text-2xl font-bold mb-2">DISCORD CLONE</h3>
-          <p class="opacity-70 text-sm">
-            This project is part of the Santander Frontend Bootcamp 2025 by DIO, where the challenge was to clone a Discord page using HTML and CSS with Flexbox, applying concepts of responsive layout, semantics, and Flexbox.
-          </p>
-        </div>
+        <!-- Discord Clone -->
+        <a href="https://github.com/thiciriano/DESAFIODIOBOOTCAMP2" target="_blank" class="group block">
+          <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
+            <img src="assets/discordpng.png" alt="Discord Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">{ [DISCORD CLONE] }</h3>
+              <p class="opacity-70 text-sm">
+                This project is part of the Santander Frontend Bootcamp 2025 by DIO, where the challenge was to clone a Discord page using HTML and CSS with Flexbox, applying concepts of responsive layout, semantics, and Flexbox.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- YouTube Clone -->
+        <a href="https://github.com/thiciriano/DESAFIODIOBOOTCAMP" target="_blank" class="group block">
+          <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
+            <img src="assets/youtubepng.png" alt="YouTube Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">{ [YOUTUBE CLONE] }</h3>
+              <p class="opacity-70 text-sm">
+                This project is part of the Santander Frontend Bootcamp 2025 by DIO, where the challenge was to clone a YouTube page using HTML and CSS with Flexbox, applying concepts of responsive layout, semantics, and Flexbox.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- To-Do List -->
+        <a href="https://github.com/thiciriano/to-do-list" target="_blank" class="group block">
+          <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
+            <img src="assets/todolist.png" alt="To-Do List" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">{ [TO-DO LIST] }</h3>
+              <p class="opacity-70 text-sm">
+                A modern, accessible, and fully functional To-Do List built only with HTML, Tailwind CSS, and jQuery.
+              </p>
+            </div>
+          </div>
+        </a>
+
       </div>
-    </a>
-
-    <!-- YouTube Clone -->
-    <a href="https://github.com/thiciriano/DESAFIODIOBOOTCAMP" target="_blank" class="group block">
-      <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
-        <img src="assets/youtubepng.png" alt="YouTube Clone" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
-        <div class="p-6">
-          <h3 class="text-2xl font-bold mb-2">YOUTUBE CLONE</h3>
-          <p class="opacity-70 text-sm">
-            This project is part of the Santander Frontend Bootcamp 2025 by DIO, where the challenge was to clone a YouTube page using HTML and CSS with Flexbox, applying concepts of responsive layout, semantics, and Flexbox.
-          </p>
-        </div>
-      </div>
-    </a>
-
-    <!-- To-Do List -->
-    <a href="https://github.com/thiciriano/to-do-list" target="_blank" class="group block">
-      <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 transition">
-        <img src="assets/todolist.png" alt="To-Do List" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition" />
-        <div class="p-6">
-          <h3 class="text-2xl font-bold mb-2">Interactive To-Do List</h3>
-          <p class="opacity-70 text-sm">
-            A modern, accessible, and fully functional To-Do List built only with HTML, Tailwind CSS, and jQuery.
-          </p>
-        </div>
-      </div>
-    </a>
-
-  </div>
-</section>
-
+    </section>
 
     <!-- Skills -->
-   <section id="skills" class="text-center">
-  <h1 class="title text-5xl font-bold mb-6">Skills</h1>
-  <h2 class="subtitle text-3xl opacity-60 mb-12">[Technologies & Tools]</h2>
-  <div class="flex flex-wrap justify-center gap-10 text-lg">
-    <span class="flex items-center gap-4">
-      <i data-lucide="file-code"></i> HTML5
-    </span>
-    <span class="flex items-center gap-4">
-      <i data-lucide="paintbrush"></i> CSS3
-    </span>
-    <span class="flex items-center gap-4">
-      <i data-lucide="code"></i> JavaScript
-    </span>
-    <span class="flex items-center gap-4">
-      <i data-lucide="git-branch"></i> Git & GitHub
-    </span>
-    <span class="flex items-center gap-4">
-      <i data-lucide="layers"></i> Tailwind CSS
-    </span>
-    <span class="flex items-center gap-4">
-      <i data-lucide="accessibility"></i> Accessibility
-    </span>
-  </div>
-</section>
-
+    <section id="skills" class="text-center">
+      <h1 class="title text-5xl font-bold mb-6">{ [SKILLS] }</h1>
+      <h2 class="subtitle text-3xl opacity-60 mb-12">{ [Technologies & Tools] }</h2>
+      <div class="flex flex-wrap justify-center gap-10 text-lg">
+        <span class="flex items-center gap-4"><i data-lucide="file-code" class="w-6 h-6"></i> HTML5</span>
+        <span class="flex items-center gap-4"><i data-lucide="paintbrush" class="w-6 h-6"></i> CSS3</span>
+        <span class="flex items-center gap-4"><i data-lucide="code" class="w-6 h-6"></i> JavaScript</span>
+        <span class="flex items-center gap-4"><i data-lucide="git-branch" class="w-6 h-6"></i> Git & GitHub</span>
+        <span class="flex items-center gap-4"><i data-lucide="layers" class="w-6 h-6"></i> Tailwind CSS</span>
+        <span class="flex items-center gap-4"><i data-lucide="accessibility" class="w-6 h-6"></i> Accessibility</span>
+      </div>
+    </section>
 
     <!-- Contact -->
     <section id="contact" class="text-center">
-      <h1 class="title text-5xl font-bold mb-6">Contact</h1>
-      <h2 class="subtitle text-3xl opacity-60 mb-60 mb-12">[Get In Touch]</h2>
+      <h1 class="title text-5xl font-bold mb-6">{ [CONTACT] }</h1>
+      <h2 class="subtitle text-3xl opacity-60 mb-12">{ [Get In Touch] }</h2>
       <div class="flex justify-center gap-12 text-4xl">
         <a href="https://github.com/thiciriano" target="_blank" aria-label="GitHub" class="hover:opacity-60 transition">
           <i data-lucide="github"></i>
@@ -180,7 +147,7 @@
         $body.toggleClass('dark');
         const isDark = $body.hasClass('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        lucide.createIcons(); // Re-renderiza ícones para refletir a mudança de cor
+        lucide.createIcons();
       });
     });
   </script>
